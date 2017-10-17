@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<h1>Hello World Example</h1>
+
+
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th><b>Nombre</b></th>
+        <th><b>Edad</b></th>
+    </tr>
+    </thead>
+    <tbody th:each="person: ${people}">
+    <tr>
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.age}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+   banner:
+    location: banner.txt
+   spring:
+     thymeleaf:
+       check-template-location: true
+       check-template: true
+   server:
+     error:
+       whitelabel:
+         enabled: true

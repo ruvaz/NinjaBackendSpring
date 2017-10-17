@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en"></head>
+<body>
+<form th:action="@{/example3/addperson}" th:object="${person}" method="post" xmlns:th="http://www.w3.org/1999/xhtml">
+    <p>NAME: <input type="text" th:field="*{name}" /></p>
+    <p>AGE: <input type="number" th:field="*{age}" /></p>
+    <p><input type="submit" value="Submit" /></p>
+</form>
+</body>
+</html>
