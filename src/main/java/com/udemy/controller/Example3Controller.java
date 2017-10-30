@@ -33,14 +33,23 @@ public class Example3Controller {
         return new RedirectView("/example3/showform");
     }
 
-    //show form
+    /**
+     *
+     * @param model
+     * @return
+     */
     @GetMapping("/showform")
     public String showForm( Model model){
         model.addAttribute("person", new Person());
         return FORM_VIEW;
     }
 
-    //request POST from form
+
+    /**
+     * request POST from form
+     * @param person
+     * @return
+     */
     @PostMapping("/addperson")
     public ModelAndView addPerson(@ModelAttribute("person") Person person){
         LOGGER.info("METHOD: 'addPerson' -- PARAMS: '"+person+"'");

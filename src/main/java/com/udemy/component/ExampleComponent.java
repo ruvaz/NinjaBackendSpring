@@ -9,6 +9,6 @@ public class ExampleComponent {
     private static final Log LOG = LogFactory.getLog(ExampleComponent.class);
 
     public void sayHello() {
-        LOG.info("SAY HELLO  EXAMPLE-COMPONENT");
+        LOG.info("=========SAY HELLO  EXAMPLE-COMPONENT========");
     }
 }

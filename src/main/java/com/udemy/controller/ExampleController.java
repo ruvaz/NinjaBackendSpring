@@ -21,15 +21,18 @@ public class ExampleController {
     public static final String EXAMPLE_VIEW = "example";
 
     @Autowired   //inyectar algo que esta en su memoria
-    @Qualifier("exampleComponent")
-    private ExampleComponent exampleComponent;
+    @Qualifier("exampleComponent") //nombre del bean ue esta en su memoria
+
+    private ExampleComponent exampleComponent; //lo inyenctan en una variable
 
 
     //primer forma
     @GetMapping("/exampleString")
     //@RequestMapping(value = "/exampleString", method = RequestMethod.GET) //Sustituido por get mapping
     public String exampleString(Model model) {
-        exampleComponent.sayHello(); //usando el componente
+
+        exampleComponent.sayHello(); //usando el componente inyectado
+
         //model.addAttribute("name", "John edsde get mappin");
         model.addAttribute("people", getPeople());
         return EXAMPLE_VIEW;
@@ -46,7 +49,7 @@ public class ExampleController {
        // mav.addObject("name", "Mikel");  //dato simple
 
 //        mav.addObject("person", new Person("RUBEN",33));  //dato complejo
-        mav.addObject("people", getPeople());  //dato complejo
+        mav.addObject("people", getPeople() );  //dato complejo
 
         return mav;
     }
